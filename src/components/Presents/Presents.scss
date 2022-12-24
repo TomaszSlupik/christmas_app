@@ -1,0 +1,37 @@
+.listofpresents {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   &__header {
+    font-size: 2rem;
+    color:#2b6e6c;
+   }
+   &__table {
+    width: 80%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2b6e6c;
+    border-radius: 8px;
+    box-shadow: 7px 3px 7px 2px rgba(43, 110, 108, 1);
+    text-align: center;
+   }
+}
+
+.table, tbody {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
