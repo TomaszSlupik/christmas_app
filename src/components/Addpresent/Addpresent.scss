@@ -1,0 +1,28 @@
+.addProduct {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    &__header {
+        text-align: center;
+        padding: 0.2em 0.3em;
+        font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
+    }
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../../public/img/deer.jpg");
+    }
+}
+
+@media (min-width: 576px) {
+    .addProduct {
+        height: 100%;
+        &__img {
+            background-image: url("../../../public/img/deerBig.jpg");
+            height: 400px;
+        }}
+}

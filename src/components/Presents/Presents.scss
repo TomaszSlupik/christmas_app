@@ -9,11 +9,13 @@
    &__header {
     font-size: 2rem;
     color:#2b6e6c;
+    margin-bottom: 0.5em;
    }
    &__table {
     width: 80%;
     min-height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid #2b6e6c;
@@ -34,4 +36,17 @@
     text-align: center;
 }
 
+.table {
+    &__one {
+        width: 10%;
+    }
+
+    &__two {
+        width: 45%;
+    }
+    &__sort {
+        text-align: end;
+        cursor: pointer;
+    }
+}
 
