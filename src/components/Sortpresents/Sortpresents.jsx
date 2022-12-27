@@ -10,14 +10,34 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
-export default function Sortpresents() {
+export default function Sortpresents({listpresent, setPresents}) {
 
     const [open, setOpen] = React.useState(false);
 
-    const handleClickOpen = () => {
+
+    const handleClick = () => {
       setOpen(true);
     };
   
+
+    const handleClickchangeidZA = () => {
+      const sorid_ZA = [...listpresent.sort((a, b) => a.id < b.id ? 1 : -1)]
+      setPresents(sorid_ZA)
+      setOpen(true);
+    };
+
+    const handleClickchangeidAZ = () => {
+      const sorid_AZ = [...listpresent.sort((a, b) => a.id < b.id ? -1 : 1)]
+      setPresents(sorid_AZ)
+      setOpen(true);
+    };
+
+    const handleClickchangeproductZA = () => {
+      const sortproduct_ZA = [...listpresent.sort((a,b) => a.product < b.product ? 1 : -1)]
+      setPresents(sortproduct_ZA)
+      setOpen(true);
+    }
+
     const handleClose = () => {
       setOpen(false);
     };
@@ -26,7 +46,7 @@ export default function Sortpresents() {
     <div>
         <div className="sort">
             <div className="sort_btn"
-            onClick={handleClickOpen}
+            onClick={handleClick}
             >
             Sortuj
             <i class="fa-solid fa-arrow-down-wide-short"></i>
@@ -45,12 +65,21 @@ export default function Sortpresents() {
                 <DialogContentText id="alert-dialog-description">
                 <RadioGroup
                     aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="prezent"
+                    defaultValue="prezent_az"
                     name="radio-buttons-group"
                 >
-                    <FormControlLabel value="id" control={<Radio />} label="Id" />
-                    <FormControlLabel value="prezent" control={<Radio />} label="Prezent" />
-                    <FormControlLabel value="cena" control={<Radio />} label="Cena" />
+                    <FormControlLabel 
+                    onClick={handleClickchangeidAZ}
+                    value="id_az" control={<Radio />} label="Id A-Z" />
+                    <FormControlLabel 
+                    onClick={handleClickchangeidZA}
+                    value="id_za" control={<Radio />} label="Id Z-A" />
+                    <FormControlLabel value="prezent_az" control={<Radio />} label="Prezent A-Z" />
+                    <FormControlLabel 
+                    onClick={handleClickchangeproductZA}
+                    value="prezent_za" control={<Radio />} label="Prezent Z-A" />
+                    <FormControlLabel value="cena_az" control={<Radio />} label="Cena A-Z" />
+                    <FormControlLabel value="cena_za" control={<Radio />} label="Cena Z-A" />
                    
                 </RadioGroup>
                 </DialogContentText>

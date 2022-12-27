@@ -93,12 +93,10 @@ const deleteItemWithList = (id) => {
                   <DialogContentText id="alert-dialog-slide-description">
                   <TextField 
                   onChange={changeFirst}
-                  defaultValue={present.product}
                   id="standard-basic" label="Prezent" variant="standard" />
                   <TextField
                           onChange={changeSecond}
                           label="Cena prezentu"
-                          defaultValue={present.price}
                           id="standard-start-adornment"
                           sx={{width: '25ch' }}
                           InputProps={{

@@ -33,7 +33,10 @@ const theme = createTheme({
                     <table className="table">
                     <thead>
                         <div className='table__sort'>
-                            <Sortpresents />
+                           
+                                    <Sortpresents listpresent={presents} setPresents={setPresents}/>
+                              
+                            
                         </div>
                         <tr>
                         <th scope="col" className='table__one'>#</th>
