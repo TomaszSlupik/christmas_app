@@ -8,6 +8,15 @@
         width: 100vw;
         height: 70px;
         background-color: #2b6e6c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
     }
 }
 

@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import './Presents.scss'
 import { ThemeProvider, createTheme} from '@mui/material/styles';
 import Data from '../../data/data.json'
 import Present from '../Present/Present';
 import Addpresent from '../Addpresent/Addpresent';
-import Paginationform from '../Paginationform/Paginationform';
 import Sortpresents from '../Sortpresents/Sortpresents';
 
 export default function Presents() {
 
     const [presents, setPresents] = useState(Data)
 
-    
 const theme = createTheme({
     palette: {
         primary: {
@@ -19,7 +17,6 @@ const theme = createTheme({
         }
     },
 });
-
 
   return (
     <div>
@@ -54,7 +51,7 @@ const theme = createTheme({
                         }
                     </tbody>
                     </table>  
-                    <Paginationform />  
+                  
             </div>
         </div>
         </ThemeProvider>

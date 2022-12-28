@@ -13,6 +13,10 @@ import './Addpresent.scss'
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import { useState } from 'react';
+import Box from '@mui/material/Box';
+import Alert from '@mui/material/Alert';
+import Collapse from '@mui/material/Collapse';
+
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogContent-root': {
@@ -69,6 +73,8 @@ export default function Addpresent({presents, setPresents}) {
     }
 
     const [open, setOpen] = React.useState(false);
+    const [alertAddProduct, setAlertAddProduct] = useState(false)
+
 
     const handleClickOpen = () => {
       setOpen(true);
@@ -90,11 +96,11 @@ export default function Addpresent({presents, setPresents}) {
         ...presents, newProduct
       ]
       setPresents(allproducts)
+      setAlertAddProduct(true)
       newuid()
     };
 
     const firstAdd = (e) => {
-      console.log(newPresent)
       setNewPresent(e.target.value)
     }
 
@@ -156,10 +162,30 @@ export default function Addpresent({presents, setPresents}) {
                         </Button>
                     </DialogActions>
                     </BootstrapDialog>
-                </div>
-            </div>
+                </div>       
+            </div>       
         </div>
- 
+                    <Box sx={{ width: '100%' }}>
+                      <Collapse in={alertAddProduct}>
+                        <Alert
+                          action={
+                            <IconButton
+                              aria-label="close"
+                              color="inherit"
+                              size="small"
+                              onClick={() => {
+                                setAlertAddProduct(false);
+                              }}
+                            >
+                              <CloseIcon fontSize="inherit" />
+                            </IconButton>
+                          }
+                          sx={{ mb: 2 }}
+                        >
+                          Prezent został dodany do listy. 
+                        </Alert>
+                      </Collapse>
+                    </Box>
     </div>
   )
 }

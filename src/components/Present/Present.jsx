@@ -40,19 +40,17 @@ export default function Present({present, listpresent, setPresents}) {
       price: edidprice
     }
     setPresents(copyeditpresent.map(el => el.id === id ? editnewproduct : el))
-    
-
   }
   
 
   const [open, setOpen] = React.useState(false);
+ 
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
   const handleClose = (id) => {
-    console.log(id)
     editProducttoList(id)
     setOpen(false);
   };
@@ -67,8 +65,10 @@ const deleteItemWithList = (id) => {
   const copypresent = [...listpresent]
   const editallpresent = copypresent.filter(el => el.id !== id)
   setPresents(editallpresent)
-
 }
+
+
+
 
   return (
         <>
@@ -115,9 +115,11 @@ const deleteItemWithList = (id) => {
                 </DialogActions>
               </Dialog>
             </td>
-            <td><DeleteIcon 
+            <td>
+            <DeleteIcon 
             onClick={() => deleteItemWithList(present.id)}
-            className={`text-${theme.danger}`} style={style.item}/></td>
+            className={`text-${theme.danger}`} style={style.item}/>
+            </td>
             </tr>
 
         </>

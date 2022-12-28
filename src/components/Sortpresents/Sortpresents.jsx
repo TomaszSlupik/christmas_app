@@ -8,6 +8,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import './Sortpresents.scss'
 
 
 export default function Sortpresents({listpresent, setPresents}) {
@@ -38,6 +40,22 @@ export default function Sortpresents({listpresent, setPresents}) {
       setOpen(true);
     }
 
+    const handleClickchangeproductAZ = () => {
+      const sortproduct_AZ = [...listpresent.sort((a,b) => a.product < b.product ? -1 : 1)]
+      setPresents(sortproduct_AZ)
+      setOpen(true);
+    }
+
+    const handleClickchangepriceAZ = () => {
+      const sortpriceAZ = [...listpresent.sort((a,b) => a.price < b.price ? -1 : 1)]
+        setPresents(sortpriceAZ)
+    }
+
+    const handleClickchangepriceZA = () => {
+      const sortpriceZA = [...listpresent.sort((a, b) => a.price < b.price ? 1 : -1)]
+      setPresents(sortpriceZA)
+    }
+
     const handleClose = () => {
       setOpen(false);
     };
@@ -49,9 +67,12 @@ export default function Sortpresents({listpresent, setPresents}) {
             onClick={handleClick}
             >
             Sortuj
-            <i class="fa-solid fa-arrow-down-wide-short"></i>
+            <i className="fa-solid fa-arrow-down-wide-short"></i>
             </div>
-                    
+            <div className="sort_filter">
+              Filtruj
+            <FilterAltIcon />
+            </div>      
             <Dialog
                 open={open}
                 onClose={handleClose}
@@ -74,12 +95,18 @@ export default function Sortpresents({listpresent, setPresents}) {
                     <FormControlLabel 
                     onClick={handleClickchangeidZA}
                     value="id_za" control={<Radio />} label="Id Z-A" />
-                    <FormControlLabel value="prezent_az" control={<Radio />} label="Prezent A-Z" />
+                    <FormControlLabel 
+                    onClick={handleClickchangeproductAZ}
+                    value="prezent_az" control={<Radio />} label="Prezent A-Z" />
                     <FormControlLabel 
                     onClick={handleClickchangeproductZA}
                     value="prezent_za" control={<Radio />} label="Prezent Z-A" />
-                    <FormControlLabel value="cena_az" control={<Radio />} label="Cena A-Z" />
-                    <FormControlLabel value="cena_za" control={<Radio />} label="Cena Z-A" />
+                    <FormControlLabel 
+                    onClick={handleClickchangepriceAZ}
+                    value="cena_az" control={<Radio />} label="Cena A-Z" />
+                    <FormControlLabel 
+                    onClick={handleClickchangepriceZA}
+                    value="cena_za" control={<Radio />} label="Cena Z-A" />
                    
                 </RadioGroup>
                 </DialogContentText>
@@ -92,6 +119,7 @@ export default function Sortpresents({listpresent, setPresents}) {
                 onClick={handleClose} autoFocus>
                     Sortuj
                 </Button>
+                
                 </DialogActions>
             </Dialog>
     
