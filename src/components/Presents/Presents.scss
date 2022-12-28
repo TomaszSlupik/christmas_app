@@ -55,15 +55,17 @@
 
 
 tbody {
-    height: 180px;
-    overflow: scroll;
+    position: relative;
+    min-height: 180px;
+    overflow: auto;
     &::-webkit-scrollbar {
         width: 15px;
         height: 100%;
+        border: 1px solid #2b6e6c;
         
     }
     &::-webkit-scrollbar-thumb {
-        background: #4e42d4;
+        background: #2b6e6c;
         border-radius: 8px;
       }
 

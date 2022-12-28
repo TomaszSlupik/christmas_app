@@ -6,6 +6,8 @@ import Presents from './components/Presents/Presents';
 import Contacts from './components/Contacts/Contacts';
 import './App.scss'
 import Footer from './components/Footer/Footer';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 
 function App() {
