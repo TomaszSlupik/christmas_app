@@ -33,7 +33,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    text-align: center; 
+    
+
 }
 
 .table {
@@ -48,5 +50,22 @@
         text-align: end;
         cursor: pointer;
     }
+   
+}
+
+
+tbody {
+    height: 180px;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        width: 15px;
+        height: 100%;
+        
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #4e42d4;
+        border-radius: 8px;
+      }
+
 }
 
