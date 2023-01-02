@@ -3,7 +3,6 @@ import Nav from './components/Nav/Nav';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from './components/Main/Main';
 import Presents from './components/Presents/Presents';
-import Contacts from './components/Contacts/Contacts';
 import './App.scss'
 import Footer from './components/Footer/Footer';
 import "slick-carousel/slick/slick.css"; 
@@ -17,9 +16,8 @@ function App() {
       <Router>
       <Nav />
       <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/presents' element={<Presents />} />
-        <Route path='/contacts' element={<Contacts />} />
+        <Route path='/christmas_app' element={<Main />} />
+        <Route path='/christmas_app/presents' element={<Presents />} />
       </Routes>
       <Footer />
     </Router>

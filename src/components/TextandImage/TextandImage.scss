@@ -3,4 +3,33 @@
     position: relative;
     width: 100vw;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        position: relative;
+        width: 80%;
+       
+        &-text {
+            height: 214px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0.2em 0.1em;
+            height: 100%;
+        }
+    }
 }
+
+@media (min-width: 568px) {
+    .TextandImage  {
+        &__box {
+            &-text {
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            height: 100%;
+
+            }    
+        }
+    }
+}
+

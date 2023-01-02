@@ -25,17 +25,12 @@ export default function Nav() {
   const linkNav = [
     {
       nameLink:'Home',
-      hrefLink: '/'
+      hrefLink: '/christmas_app'
     },
     {
       nameLink:'Prezenty',
-      hrefLink: '/presents'
+      hrefLink: '/christmas_app/presents'
     },
-    {
-      nameLink:'Kontakt',
-      hrefLink: '/contacts'
-    },
-
   ]
 
   const style ={

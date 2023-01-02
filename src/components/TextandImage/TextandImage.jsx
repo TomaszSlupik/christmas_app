@@ -12,22 +12,30 @@ const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: 'center',
+    display: 'flex',
     color: theme.palette.text.secondary,
     }));
     
 
   return (
     <div className='TextandImage'>
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-      </Grid>
-    </Box>
+      <div className="TextandImage__box">
+          <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={8}>
+              <Item>
+                <img src={process.env.PUBLIC_URL + './img/fireworks.jpg'} alt="nowy rok - fajerwerki" />
+              </Item>
+            </Grid>
+            <Grid item xs={4}>
+              <Item className='TextandImage__box-text'>Strona o tematyce Świąt Bożego Narodzenia i Nowego Roku.
+              
+              </Item>
+            </Grid>
+          </Grid>
+        </Box>
+
+      </div>
     </div>
   )
 }
