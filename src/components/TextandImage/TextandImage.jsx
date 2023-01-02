@@ -24,7 +24,7 @@ const Item = styled(Paper)(({ theme }) => ({
           <Grid container spacing={2}>
             <Grid item xs={8}>
               <Item>
-                <img src={process.env.PUBLIC_URL + './img/fireworks.jpg'} alt="nowy rok - fajerwerki" />
+                <img src={process.env.PUBLIC_URL + '/img/fireworks.jpg'} alt="nowy rok - fajerwerki" />
               </Item>
             </Grid>
             <Grid item xs={4}>

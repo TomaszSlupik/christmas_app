@@ -17,22 +17,22 @@ export default class Carousel extends Component {
             <div className="carousel__box-carousel">
         <Slider {...settings}>
           <div>
-            <img src={process.env.PUBLIC_URL + './img/one.jpg'} alt="swiąteczna ulica" />
+            <img src={process.env.PUBLIC_URL + '/img/one.jpg'} alt="swiąteczna ulica" />
           </div>
           <div>
-          <img src={process.env.PUBLIC_URL + './img/two.jpg'} alt="kotek świąteczny" />
+          <img src={process.env.PUBLIC_URL + '/img/two.jpg'} alt="kotek świąteczny" />
           </div>
           <div>
-          <img src={process.env.PUBLIC_URL + './img/three.jpg'} alt="prezenty" />
+          <img src={process.env.PUBLIC_URL + '/img/three.jpg'} alt="prezenty" />
           </div>
           <div>
-          <img src={process.env.PUBLIC_URL + './img/four.jpg'} alt="zima" />
+          <img src={process.env.PUBLIC_URL + '/img/four.jpg'} alt="zima" />
           </div>
           <div>
-          <img src={process.env.PUBLIC_URL + './img/five.jpg'} alt="święta" />
+          <img src={process.env.PUBLIC_URL + '/img/five.jpg'} alt="święta" />
           </div>
           <div>
-          <img src={process.env.PUBLIC_URL + './img/six.jpg'} alt="choinka" />
+          <img src={process.env.PUBLIC_URL + '/img/six.jpg'} alt="choinka" />
           </div>
         </Slider>
       </div>
