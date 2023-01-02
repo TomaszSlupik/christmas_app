@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/christmas_app/static/css/main.560a2de5.css",
+    "main.js": "/christmas_app/static/js/main.9caf13ae.js",
+    "static/media/deerBig.jpg": "/christmas_app/static/media/deerBig.2d372e140461418e5e70.jpg",
+    "static/media/deer.jpg": "/christmas_app/static/media/deer.38d1870a1f1c286d55cd.jpg",
+    "static/media/slick.svg": "/christmas_app/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/christmas_app/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/christmas_app/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/christmas_app/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/christmas_app/index.html",
+    "main.560a2de5.css.map": "/christmas_app/static/css/main.560a2de5.css.map",
+    "main.9caf13ae.js.map": "/christmas_app/static/js/main.9caf13ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.560a2de5.css",
+    "static/js/main.9caf13ae.js"
+  ]
+}
